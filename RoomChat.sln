@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomChat.Website", "RoomChat.Website\RoomChat.Website.csproj", "{92336E4E-2313-42CE-9F87-3766264EB569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomChat.Dalc", "RoomChat.Dalc\RoomChat.Dalc.csproj", "{02BEEBAE-3205-47F7-9A86-649950C7EBDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomChat.Dalc.Initializer", "RoomChat.Dalc.Initializer\RoomChat.Dalc.Initializer.csproj", "{AA66C9C3-72E0-45BC-A6DA-93CBE695FCF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomChat.ChatService", "RoomChat.ChatService\RoomChat.ChatService.csproj", "{D0AE5552-1791-4FE8-8D65-D16EE712AD17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92336E4E-2313-42CE-9F87-3766264EB569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92336E4E-2313-42CE-9F87-3766264EB569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92336E4E-2313-42CE-9F87-3766264EB569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92336E4E-2313-42CE-9F87-3766264EB569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BEEBAE-3205-47F7-9A86-649950C7EBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BEEBAE-3205-47F7-9A86-649950C7EBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BEEBAE-3205-47F7-9A86-649950C7EBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BEEBAE-3205-47F7-9A86-649950C7EBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA66C9C3-72E0-45BC-A6DA-93CBE695FCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA66C9C3-72E0-45BC-A6DA-93CBE695FCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA66C9C3-72E0-45BC-A6DA-93CBE695FCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA66C9C3-72E0-45BC-A6DA-93CBE695FCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0AE5552-1791-4FE8-8D65-D16EE712AD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0AE5552-1791-4FE8-8D65-D16EE712AD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0AE5552-1791-4FE8-8D65-D16EE712AD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0AE5552-1791-4FE8-8D65-D16EE712AD17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
