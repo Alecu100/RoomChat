@@ -19,25 +19,25 @@ namespace RoomChat.Website.Controllers
         #region Public Methods and Operators
 
         /// <summary>
+        ///     The chat.
+        /// </summary>
+        /// <returns>
+        ///     The <see cref="ActionResult" />.
+        /// </returns>
+        public ActionResult Chat()
+        {
+            return this.View("Chat");
+        }
+
+        /// <summary>
         ///     The index.
         /// </summary>
         /// <returns>
         ///     The <see cref="ActionResult" />.
         /// </returns>
-        public ActionResult AllChatRooms()
+        public ActionResult ChatRooms()
         {
-            return this.View("AllChatRooms");
-        }
-
-        /// <summary>
-        /// The my chat rooms.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="ActionResult"/>.
-        /// </returns>
-        public ActionResult MyChatRooms()
-        {
-            return this.View("MyChatRooms");
+            return this.View("ChatRooms");
         }
 
         #endregion

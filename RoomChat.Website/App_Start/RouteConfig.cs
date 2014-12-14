@@ -28,7 +28,10 @@ namespace RoomChat.Website
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("Home", string.Empty, new { controller = "Home", action = "Index", id = UrlParameter.Optional });
+            routes.MapRoute(
+                "Home", 
+                string.Empty, 
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional });
 
             routes.MapRoute(
                 "Default", 
