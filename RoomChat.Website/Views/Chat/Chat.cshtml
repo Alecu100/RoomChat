@@ -3,14 +3,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Chat</h2>
-<div id="header">
-    SignalR Chat Room
-</div>
-<br />
-<br />
-<br />
-
 <div id="divContainer">
     <div id="divChat" class="chatRoom">
         <div class="content">
@@ -30,9 +22,48 @@
 </div>
 
 @section scripts {
+    <script src="/Scripts/knockout-3.0.0.js"></script>
     <script src="/Scripts/jquery.signalR-2.1.2.js"></script>
     <script src="/signalr/hubs"></script>
     <script type="text/javascript">
+        
+        function messageModel(message) {
+            this.text = new ko.observable(message.Text);
+            this.user = new ko.observable(message.User.UserName);
+            this.userId = new ko.observable(message.UserId);
+        }
+
+        function userModel(user) {
+            this.id = new ko.observable(user.Id);
+            this.userName = new ko.observable(user.UserName);
+        }
+
+        function roomModel(room) {
+            this.id = room.Id;
+            this.name = room.Name;
+            this.messages = new ko.observableArray();
+            this.joinedUsers = new ko.observableArray();
+
+
+            for (var message in room.Messages) {
+                this.messages.push(new messageModel(message));
+            }
+
+            for (var user in room.JoinedUsers) {
+                this.joinedUsers.push(new userModel(user));
+            }
+        }
+
+        function chatModel(chat, currentUser) {
+            this.currentUser = new userModel(currentUser);
+            this.rooms = new ko.observableArray(chat.Rooms);
+
+            for (var room in chat.Rooms) {
+                chat.rooms.push(new roomModel(room));
+            }
+
+            this.selectedRoomId = new ko.observable(-1);
+        }
 
         $(document).ready((function() {
             var chatHub = $.connection.chatHub;
@@ -64,8 +95,6 @@
                     $('#btnSendMsg').click();
                 }
             });
-
-
         }
 
         function registerClientMethods(chatHub) {
